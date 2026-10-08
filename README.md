@@ -1,136 +1,228 @@
-# Customer & Marketing Analytics Dashboard
+Customer & Marketing Analytics
 
-Advanced portfolio project combining **Python + MySQL + Power BI** to analyze customer behavior, marketing acquisition, campaign efficiency, revenue, profitability, retention, churn, LTV and customer experience.
+An end-to-end Customer & Marketing Analytics portfolio project built
+with Python, MySQL, and Power BI.
 
-## Project objective
-Build an executive-ready analytics solution that answers:
+Project Overview
 
-- Which marketing channels generate revenue efficiently?
-- Which campaigns produce the strongest ROAS?
-- Which customer segments have the highest value?
-- Where is churn/retention strongest or weakest?
-- Which products and regions drive revenue and profit?
-- How do marketing spend, conversions and revenue change over time?
-- Which customers show high LTV and strong engagement?
+This project analyzes marketing performance, customer behavior, campaign
+efficiency, geographic performance, customer value, retention, and
+business growth opportunities.
 
-## Tech stack
-- Python — data cleaning, feature engineering and EDA
-- MySQL — database storage and SQL analytics
-- Power BI — executive dashboard, DAX and interactive analysis
-- GitHub — portfolio documentation and source control
+Dataset
 
-## Repository structure
-```text
-customer-marketing-analytics/
-│
-├── data/
-│   ├── customer_marketing_analytics.csv
-│   ├── DATA_DICTIONARY.md
-│   └── ...
-│
-├── python/
-│   ├── 01_clean_and_engineer.py
-│   ├── 02_eda_and_insights.py
-│   ├── 03_executive_summary.py
-│   └── requirements.txt
-│
-├── mysql/
-│   ├── 01_create_database_and_table.sql
-│   ├── 02_analytics_queries.sql
-│   └── 03_load_csv.sql
-│
-├── powerbi/
-│   └── POWER_BI_BUILD_GUIDE.md
-│
-└── README.md
-```
+15,000 transactions
 
-## Dataset
-The included sample dataset contains 15,000 marketing/customer transactions across:
-- acquisition channels
-- campaigns
-- customer segments
-- industries
-- products
-- countries and regions
-- devices and promotions
-- impressions, clicks and leads
-- conversions
-- marketing spend
-- revenue and gross profit
-- LTV
-- retention/churn
-- NPS and CSAT
+29 fields
 
-This is a synthetic portfolio dataset created for demonstration and learning. It should not be represented as real client/company data.
+Customer, marketing, campaign, product, geographic, revenue, profit,
+retention, and satisfaction data
 
-## Python workflow
-1. Install dependencies:
-```bash
-pip install -r python/requirements.txt
-```
+Tools & Technologies
 
-2. Run:
-```bash
-python python/01_clean_and_engineer.py
-python python/02_eda_and_insights.py
-python python/03_executive_summary.py
-```
+Python
 
-The Python layer creates derived metrics such as:
-- CTR
-- lead rate
-- conversion rate
-- ROAS
-- CAC
+Pandas
 
-## MySQL workflow
-1. Open MySQL Workbench.
-2. Run `mysql/01_create_database_and_table.sql`.
-3. Load the cleaned CSV using `mysql/03_load_csv.sql`.
-4. Run `mysql/02_analytics_queries.sql`.
-5. Confirm the row count is 15,000.
+Plotly
 
-## Power BI workflow
-Connect Power BI to:
-`customer_marketing_db` → `customer_marketing`
+Streamlit
 
-Create DAX measures for:
-- Total Revenue
-- Total Spend
-- Gross Profit
-- ROAS
-- CAC
-- Customers
-- Avg LTV
-- Avg NPS
-- Avg Churn
-- Avg Retention
+MySQL
 
-Recommended report pages:
-1. Executive Overview
-2. Marketing Performance
-3. Customer Intelligence
-4. Campaign & Product
-5. Geography & Drillthrough
-6. Product & Customer Segment Analytics
-7. Executive Performance Summary
-8. Business Insights & Management Actions
+Power BI
 
-## Business insights framework
-When writing the final portfolio case study, focus on:
-1. **Acquisition efficiency** — compare spend, revenue, ROAS and CAC.
-2. **Customer value** — compare LTV, revenue and retention by segment.
-3. **Customer experience** — connect NPS/CSAT with customer value.
-4. **Retention risk** — identify segments/geographies with higher churn.
-5. **Growth opportunities** — identify strong campaigns/products and investigate why they perform well.
-6. **Budget optimization** — use ROAS/CAC as evidence, while noting that attribution data does not prove incremental causality.
+DAX
 
-## Portfolio description
-> Built an end-to-end Customer & Marketing Analytics solution using Python, MySQL and Power BI. The project combines marketing performance, customer segmentation, LTV, retention, churn, campaign efficiency and executive KPIs into an interactive analytics workflow.
+GitHub
 
-## Important analytical note
-ROAS and CAC are attribution-style metrics in this synthetic dataset. They are useful for portfolio analysis but do not by themselves establish causal or incremental marketing impact.
+Key KPIs
 
-## License
-For portfolio, learning and demonstration purposes.
+KPI                               Result
+
+Total Revenue               $28.32M
+Marketing Spend               $968K
+Gross Profit                $19.44M
+ROAS                          29.25x
+Conversions                   37,172
+Leads                        354,748
+Clicks                     3,880,686
+Average Customer LTV         $1.45K
+Average NPS                    43.92
+Average CSAT                    4.06
+Average Retention Rate        75.05%
+
+Power BI Dashboard --- 8 Pages
+
+01 --- Executive Overview
+
+Focus: Overall business performance.
+
+Revenue, Marketing Spend, Gross Profit, ROAS, Monthly Revenue Trend,
+Revenue by Acquisition Channel, Revenue by Customer Segment, and Revenue
+by Country.
+
+02 --- Marketing Performance
+
+Focus: Campaign efficiency and marketing ROI.
+
+Marketing Spend, Revenue, ROAS, Conversions, Campaign Revenue & ROAS,
+Spend vs Revenue by Channel, Conversion Funnel, and ROAS by Acquisition
+Channel.
+
+Filters: Acquisition Channel, Campaign, Customer Segment, Date.
+
+03 --- Customer Intelligence
+
+Focus: Customer value, retention, churn, and satisfaction.
+
+Average Customer LTV, NPS, CSAT, Retention Rate, Revenue by Segment,
+Revenue by Status, Retention vs Churn, LTV by Segment, NPS & CSAT by
+Segment, and Top Countries by Customer Revenue.
+
+04 --- Geographic & Regional Analytics
+
+Focus: Geographic, regional, and industry performance.
+
+Revenue, Gross Profit, Unique Customers, Conversions, Top Countries,
+Revenue/Gross Profit/Conversions by Region, Revenue/Gross Profit by
+Industry, and Monthly Revenue Trend by Region.
+
+05 --- Campaign & Conversion Analytics
+
+Focus: Campaign ROI, CTR, conversion rate, leads, and conversions.
+
+Impressions, Clicks, Leads, Conversion Rate, Top Campaigns by
+Revenue/ROAS/Conversion Rate/CTR, Monthly Conversion Trend, Monthly
+Leads vs Conversions, and Conversion Funnel.
+
+06 --- Product & Customer Segment Analytics
+
+Focus: Product performance and customer segment contribution.
+
+Revenue, Gross Profit, Unique Customers, Average Customer LTV, Top
+Products by Revenue and Gross Profit, Segment Revenue/Profit, Product
+Revenue by Acquisition Channel and Region, and Monthly Product Revenue
+Trend.
+
+07 --- Executive Performance Summary
+
+Focus: Management-level performance summary.
+
+Revenue, Gross Profit, Unique Customers, ROAS, Monthly Revenue & Gross
+Profit, Acquisition Channel, Customer Segment, Top Countries, Top
+Campaigns by ROAS, Retention vs Churn, LTV, NPS, and CSAT.
+
+08 --- Key Business Insights
+
+Focus: Performance highlights, growth opportunities, and management
+actions.
+
+Revenue Performance
+
+Total Revenue: $28.32M
+
+Gross Profit: $19.44M
+
+Enterprise customers generate approximately $22.48M in revenue.
+
+Google Ads is the largest acquisition channel at approximately
+$12.52M.
+
+Marketing Efficiency
+
+Overall ROAS: 29.25x
+
+Marketing Spend: $968K
+
+Performance Max delivers 36.09x ROAS.
+
+Brand Search delivers 34.94x ROAS.
+
+Geographic Performance
+
+Top Country: Canada --- $4.46M
+
+Second: United States --- $4.31M
+
+North America represents the largest regional revenue contribution.
+
+Customer Intelligence
+
+Average Customer LTV: $1.45K
+
+Average NPS: 43.92
+
+Average CSAT: 4.06
+
+Average Retention Rate: 75.05%
+
+Management Action Areas
+
+Marketing Optimization: Review campaign/channel performance and
+monitor spend against revenue contribution.
+
+Customer Growth: Focus retention initiatives on valuable
+segments and monitor retention, churn, NPS, CSAT, and LTV together.
+
+Geographic Expansion: Compare country and regional performance
+before increasing marketing investment.
+
+Product Strategy: Compare product revenue and gross profit and
+monitor performance across channels and regions.
+
+Python Analytics
+
+The Python folder contains: - 01_Customer_Marketing_Dashboard.py -
+02_Customer_Marketing_Analytics.py
+
+The Python work includes KPI calculations, data analysis, interactive
+filtering, and visual analytics using Pandas, Plotly, and Streamlit.
+
+MySQL Analysis
+
+The MySQL folder contains database setup, analytical queries,
+performance analysis, and the vw_customer_marketing view.
+
+Analysis covers Campaign, Channel, Country, Customer Segment, Customer
+Status, Monthly Performance, and Marketing Analytics.
+
+Screenshots
+
+The Screenshots folder contains the dashboard visuals. The complete
+Power BI dashboard consists of all 8 pages listed above.
+
+Video
+
+The Video folder contains:
+
+Customer Marketing Analytics.mp4
+
+Project Structure
+
+Customer-Marketing-Analytics/
+├── Python/
+├── MySQL/
+├── Power BI/
+├── Screenshots/
+├── Video/
+├── Data/
+├── Documentation/
+├── README.md
+└── requirements.txt
+
+Portfolio Value
+
+This project demonstrates practical skills in: - Business Intelligence -
+Marketing Analytics - Customer Analytics - Dashboard Design - KPI
+Development - Data Visualization - SQL Analysis - Power BI & DAX -
+Python Analytics - Executive Reporting - Business Insights &
+Recommendations
+
+Author
+
+Sajjad Moosa
+
+sajjadmoosa651@gmail.com
+
+Customer & Marketing Analytics Portfolio Project
